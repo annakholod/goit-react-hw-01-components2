@@ -1,0 +1,7 @@
+.pricingPlan {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 30px;
+  list-style: none;
+}
