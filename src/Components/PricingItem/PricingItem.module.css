@@ -29,21 +29,6 @@
   text-transform: uppercase;
 }
 
-.labelBronze {
-  composes: label;
-  color: #dd7c4b;
-}
-
-.labelSilver {
-  composes: label;
-  color: #c0c0c0;
-}
-
-.labelGold {
-  composes: label;
-  color: #dda431;
-}
-
 .capacity {
   margin: 0;
   padding: 0 0 16px 0;
@@ -79,19 +64,4 @@
   border: none;
   cursor: pointer;
   outline: none;
-}
-
-.buttonBronze {
-  composes: button;
-  background-color: #dd7c4b;
-}
-
-.buttonSilver {
-  composes: button;
-  background-color: #c0c0c0;
-}
-
-.buttonGold {
-  composes: button;
-  background-color: #dda431;
 }

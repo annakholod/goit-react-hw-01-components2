@@ -5,7 +5,7 @@ import style from './TransactionHistory.module.css';
 const TransactionHistory = ({ historyItems }) => {
   return (
     <>
-      {historyItems.length > 0 ? (
+      {historyItems.length ? (
         <table className={style.transactionHistory}>
           <thead className={style.tableHeader}>
             <tr className={style.tableRow}>

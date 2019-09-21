@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import style from './Stats.module.css';
 
-const Stats = ({ title, statistics }) => {
-  const ramdomColor = () => {
-    const bgColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(
-      Math.random() * 256,
-    )}, ${Math.floor(Math.random() * 256)})`;
-    return bgColor;
-  };
+const ramdomColor = () => {
+  const bgColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(
+    Math.random() * 256,
+  )}, ${Math.floor(Math.random() * 256)})`;
+  return bgColor;
+};
 
+const Stats = ({ title, statistics }) => {
   return (
     <section className={style.statsSection}>
       {title ? <h2 className={style.title}>{title}</h2> : false}
@@ -21,7 +21,7 @@ const Stats = ({ title, statistics }) => {
             style={{ backgroundColor: ramdomColor() }}
           >
             <p className={style.label}>{el.label}</p>
-            <p className={style.percentage}>{el.percentage}</p>
+            <p className={style.percentage}>{el.percentage} %</p>
           </li>
         ))}
       </ul>
