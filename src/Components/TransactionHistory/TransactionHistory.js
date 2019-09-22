@@ -1,34 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from './TransactionHistory.module.css';
+import style from './transactionHistory.module.css';
 
-const TransactionHistory = ({ historyItems }) => {
-  return (
-    <>
-      {historyItems.length ? (
-        <table className={style.transactionHistory}>
-          <thead className={style.tableHeader}>
-            <tr className={style.tableRow}>
-              <th>Type</th>
-              <th>Amount</th>
-              <th>Currency</th>
+const TransactionHistory = ({ historyItems }) => (
+  <div>
+    {historyItems.length && (
+      <table className={style.transactionHistory}>
+        <thead className={style.tableHeader}>
+          <tr className={style.tableRow}>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Currency</th>
+          </tr>
+        </thead>
+        <tbody>
+          {historyItems.map(el => (
+            <tr className={style.tBodyRow} key={el.id}>
+              <td>{el.type}</td>
+              <td>{el.amount}</td>
+              <td>{el.currency}</td>
             </tr>
-          </thead>
-
-          <tbody>
-            {historyItems.map(el => (
-              <tr className={style.tBodyRow} key={el.id}>
-                <td>{el.type}</td>
-                <td>{el.amount}</td>
-                <td>{el.currency}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      ) : null}
-    </>
-  );
-};
+          ))}
+        </tbody>
+      </table>
+    )}
+  </div>
+);
 
 TransactionHistory.propTypes = {
   historyItems: PropTypes.arrayOf(

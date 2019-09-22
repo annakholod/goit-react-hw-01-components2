@@ -1,11 +1,13 @@
 import React from 'react';
-import './App.css';
+import './app.css';
 import Profile from '../Profile/Profile';
 import Stats from '../Stats/Stats';
 import PricingPlan from '../PricingPlan/PricingPlan';
 import TransactionHistory from '../TransactionHistory/TransactionHistory';
+import FriendList from '../FriendList/FriendList';
 import items from '../../accepts/pricing-plan.json';
 import historyItems from '../../accepts/transactions.json';
+import friends from '../../accepts/friends.json';
 
 const user = {
   name: 'Jacques Gluke',
@@ -29,7 +31,7 @@ const statistics = [
 
 function App() {
   return (
-    <>
+    <div>
       <Profile
         avatar={user.avatar}
         alt={user.alt}
@@ -43,7 +45,8 @@ function App() {
       <Stats title="Upload stats" statistics={statistics} />
       <PricingPlan items={items} />
       <TransactionHistory historyItems={historyItems} />
-    </>
+      <FriendList friends={friends} />
+    </div>
   );
 }
 
